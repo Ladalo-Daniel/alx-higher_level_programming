@@ -1,9 +1,17 @@
 #!/usr/bin/python3
 def multiple_returns(sentence):
-    if not sentence:
-        sentence = None
-    if sentence:
-        sen_len = len(sentence)
-    else:
-        sen_len = 0
-    return (sen_len, sentence if not sentence else sentence[:1])`
+    length = len(sentence)
+    first_char = sentence[0] if length > 0 else "None"
+    tup = length, first_char
+    return(tup)
+
+vi 9-max_integer.py
+#!/usr/bin/python3
+def max_integer(my_list=[]):
+    if len(my_list) == 0:
+        return ("None")
+    x = my_list[0]
+    for i in my_list:
+        if i > x:
+            x = i
+    return (x)
